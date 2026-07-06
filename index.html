@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AutoCraft Accessories | Toko Aksesori Mobil</title>
+  <meta name="description" content="Website informasi toko aksesori mobil, kategori produk, tips memilih aksesori, panduan perawatan interior dan eksterior mobil." />
+
+  <style>
+    :root {
+      --dark: #0b1016;
+      --navy: #111827;
+      --blue: #2563eb;
+      --sky: #60a5fa;
+      --orange: #f97316;
+      --silver: #e5e7eb;
+      --paper: #ffffff;
+      --bg: #f3f4f6;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #d9dee7;
+      --soft-blue: #eff6ff;
+      --shadow: 0 22px 55px rgba(15, 23, 42, 0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .top-strip {
+      background: var(--dark);
+      color: #dbeafe;
+      padding: 10px 6%;
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      border-bottom: 1px solid rgba(96,165,250,0.22);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(243, 244, 246, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(17,24,39,0.08);
+      padding: 16px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 15px;
+      background:
+        radial-gradient(circle at 28% 22%, rgba(255,255,255,0.95), transparent 22%),
+        linear-gradient(145deg, #60a5fa, #2563eb 55%, #111827);
+      box-shadow: 0 12px 26px rgba(37,99,235,0.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-mark::before {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.72);
+      left: 9px;
+      bottom: 11px;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--dark);
+      left: 13px;
+      bottom: 7px;
+      box-shadow: 16px 0 0 var(--dark);
+    }
+
+    .brand-text strong {
+      display: block;
+      color: var(--dark);
+      font-size: 21px;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      color: #374151;
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    .hero {
+      min-height: 760px;
+      padding: 85px 6%;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 44px;
+      align-items: center;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(96,165,250,0.18), transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(249,115,22,0.16), transparent 24%),
+        linear-gradient(135deg, #ffffff 0%, #edf2f7 48%, #111827 48%, #060b12 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 580px;
+      height: 580px;
+      right: -210px;
+      top: -170px;
+      border-radius: 50%;
+      border: 1px solid rgba(96,165,250,0.22);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 3;
+    }
+
+    .eyebrow {
+      width: fit-content;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      color: var(--dark);
+      margin-bottom: 22px;
+      max-width: 720px;
+    }
+
+    .hero h1 span {
+      display: block;
+      background: linear-gradient(110deg, #111827, #2563eb, #f97316);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: #4b5563;
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 680px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(217,222,231,0.9);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 14px 32px rgba(15,23,42,0.06);
+      backdrop-filter: blur(10px);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--dark);
+      font-size: 23px;
+      letter-spacing: -0.8px;
+      margin-bottom: 3px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 610px;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+    }
+
+    .garage-card {
+      width: min(520px, 94vw);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)),
+        linear-gradient(145deg, #1f2937, #060b12);
+      border: 1px solid rgba(96,165,250,0.25);
+      border-radius: 38px;
+      padding: 28px;
+      color: white;
+      box-shadow: 0 42px 90px rgba(0,0,0,0.42);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .garage-card::before {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: rgba(37,99,235,0.28);
+      right: -90px;
+      top: -90px;
+      filter: blur(4px);
+    }
+
+    .garage-image {
+      height: 300px;
+      border-radius: 28px;
+      background:
+        linear-gradient(rgba(17,24,39,0.05), rgba(17,24,39,0.2)),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1100&q=80");
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 22px;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .garage-image::after {
+      content: "Auto Accessories";
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      background: rgba(0,0,0,0.55);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 850;
+      backdrop-filter: blur(10px);
+    }
+
+    .garage-card h2 {
+      position: relative;
+      z-index: 2;
+      font-size: 30px;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+    }
+
+    .garage-card p {
+      position: relative;
+      z-index: 2;
+      color: #d1d5db;
+      font-size: 15px;
+    }
+
+    section {
+      padding: 86px 6%;
+    }
+
+    .section-title {
+      max-width: 860px;
+      margin-bottom: 44px;
+    }
+
+    .section-title.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-title small {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .section-title h2 {
+      margin-top: 10px;
+      color: var(--dark);
+      font-size: clamp(34px, 4.6vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+    }
+
+    .section-title p {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 780px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(15,23,42,0.065);
+      transition: 0.25s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 55px rgba(15,23,42,0.11);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .category-content {
+      padding: 24px;
+    }
+
+    .category-content h3 {
+      color: var(--dark);
+      font-size: 22px;
+      letter-spacing: -0.7px;
+      margin-bottom: 9px;
+    }
+
+    .category-content p {
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .info-band {
+      padding: 0;
+      background: var(--dark);
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 590px;
+    }
+
+    .info-image {
+      background:
+        linear-gradient(90deg, rgba(6,11,18,0.12), rgba(6,11,18,0.42)),
+        url("https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1400&q=80");
+      background-size: cover;
+      background-position: center;
+      min-height: 590px;
+    }
+
+    .info-copy {
+      padding: 82px 6vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info-copy small {
+      color: var(--sky);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .info-copy h2 {
+      font-size: clamp(36px, 5vw, 60px);
+      line-height: 1;
+      letter-spacing: -2.3px;
+      margin-bottom: 22px;
+    }
+
+    .info-copy p {
+      color: #d1d5db;
+      font-size: 17px;
+      margin-bottom: 16px;
+      max-width: 700px;
+    }
+
+    .feature-zone {
+      background: #ffffff;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .feature-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .feature-side {
+      position: sticky;
+      top: 104px;
+      background:
+        radial-gradient(circle at 30% 0%, rgba(96,165,250,0.2), transparent 28%),
+        linear-gradient(145deg, #111827, #060b12);
+      border-radius: 34px;
+      padding: 34px;
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .feature-side h3 {
+      font-size: 31px;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .feature-side p {
+      color: #d1d5db;
+      margin-bottom: 22px;
+    }
+
+    .feature-side-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .feature-side-list div {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 14px;
+      color: #e5e7eb;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 28px;
+      min-height: 240px;
+    }
+
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 17px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .feature-card h3 {
+      font-size: 23px;
+      color: var(--dark);
+      letter-spacing: -0.7px;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .product-section {
+      background:
+        radial-gradient(circle at 20% 0%, rgba(249,115,22,0.11), transparent 25%),
+        radial-gradient(circle at 80% 10%, rgba(37,99,235,0.12), transparent 25%),
+        var(--bg);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 18px 42px rgba(15,23,42,0.07);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 235px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-content {
+      padding: 26px;
+    }
+
+    .product-tag {
+      width: fit-content;
+      background: #fff7ed;
+      color: var(--orange);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      margin-bottom: 12px;
+    }
+
+    .product-content h3 {
+      font-size: 24px;
+      color: var(--dark);
+      letter-spacing: -0.8px;
+      margin-bottom: 10px;
+    }
+
+    .product-content p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .guide-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .guide-main {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .guide-main h3 {
+      font-size: 30px;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+      margin-top: 34px;
+    }
+
+    .guide-main h3:first-child {
+      margin-top: 0;
+    }
+
+    .guide-main p {
+      color: #4b5563;
+      font-size: 16.5px;
+      margin-bottom: 16px;
+    }
+
+    .guide-main ul {
+      margin: 10px 0 20px 22px;
+      color: #4b5563;
+    }
+
+    .guide-main li {
+      margin-bottom: 10px;
+    }
+
+    .guide-side {
+      background:
+        linear-gradient(rgba(17,24,39,0.05), rgba(17,24,39,0.24)),
+        url("https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=900&q=80");
+      background-size: cover;
+      background-position: center;
+      border-radius: 34px;
+      min-height: 520px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guide-side::after {
+      content: "Detail • Comfort • Style";
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 850;
+      backdrop-filter: blur(10px);
+    }
+
+    .care-section {
+      background: var(--dark);
+      color: white;
+    }
+
+    .care-section .section-title h2 {
+      color: white;
+    }
+
+    .care-section .section-title p {
+      color: #d1d5db;
+    }
+
+    .care-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .care-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      padding: 26px;
+      min-height: 230px;
+    }
+
+    .care-card strong {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(96,165,250,0.18);
+      color: var(--sky);
+      margin-bottom: 18px;
+    }
+
+    .care-card h3 {
+      font-size: 22px;
+      letter-spacing: -0.6px;
+      margin-bottom: 10px;
+    }
+
+    .care-card p {
+      color: #d1d5db;
+      font-size: 14.5px;
+    }
+
+    .faq-section {
+      background: var(--bg);
+    }
+
+    .faq {
+      max-width: 950px;
+      margin: auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px 24px;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.045);
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--dark);
+      font-weight: 850;
+      font-size: 18px;
+    }
+
+    details p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+
+    footer {
+      background: #05080d;
+      color: #cbd5e1;
+      padding: 48px 6%;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 0.7fr;
+      gap: 30px;
+      margin-bottom: 28px;
+    }
+
+    footer h3 {
+      color: white;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    footer p,
+    footer a {
+      color: #aeb8c7;
+      font-size: 14px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.11);
+      padding-top: 20px;
+      text-align: center;
+      color: #8792a1;
+      font-size: 13px;
+    }
+
+    @media (max-width: 1080px) {
+      nav {
+        display: none;
+      }
+
+      .hero,
+      .info-band,
+      .feature-layout,
+      .guide-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        background:
+          radial-gradient(circle at 10% 10%, rgba(96,165,250,0.18), transparent 28%),
+          linear-gradient(180deg, #ffffff 0%, #edf2f7 55%, #111827 55%, #060b12 100%);
+      }
+
+      .category-grid,
+      .care-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-side {
+        position: static;
+      }
+    }
+
+    @media (max-width: 680px) {
+      header,
+      .hero,
+      section,
+      footer {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      .brand-text strong {
+        font-size: 17px;
+      }
+
+      .brand-text span {
+        font-size: 10px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-stats,
+      .category-grid,
+      .feature-grid,
+      .care-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .garage-card {
+        border-radius: 28px;
+        padding: 22px;
+      }
+
+      .garage-image {
+        height: 250px;
+      }
+
+      .guide-main {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-strip">
+    AutoCraft Accessories — informasi aksesori mobil, interior, eksterior, lighting, detailing dan penjagaan kendaraan.
+  </div>
+
+  <header>
+    <a href="#" class="brand">
+      <div class="brand-mark"></div>
+      <div class="brand-text">
+        <strong>AutoCraft Accessories</strong>
+        <span>Car Accessories Store</span>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#kategori">Kategori</a>
+      <a href="#produk">Produk</a>
+      <a href="#panduan">Panduan</a>
+      <a href="#care">Perawatan</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Automotive Lifestyle Store</div>
+
+        <h1>
+          Toko Aksesori Mobil
+          <span>Untuk Gaya & Kenyamanan Berkendara</span>
+        </h1>
+
+        <p>
+          Website informasi toko aksesori mobil dengan tampilan modern dan official.
+          Cocok untuk memperkenalkan kategori produk seperti interior, eksterior,
+          lighting, audio, detailing, organizer dan aksesori keselamatan kendaraan.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>Interior</strong>
+            <span>Organizer, seat cover, dashboard mat dan aroma mobil.</span>
+          </div>
+
+          <div class="stat">
+            <strong>Exterior</strong>
+            <span>Body trim, cover, emblem, wiper dan pelindung mobil.</span>
+          </div>
+
+          <div class="stat">
+            <strong>Detailing</strong>
+            <span>Produk perawatan cat, kaca, ban dan kabin kendaraan.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="garage-card">
+          <div class="garage-image"></div>
+          <h2>Upgrade tampilan mobil dengan pilihan aksesori yang tepat.</h2>
+          <p>
+            Aksesori mobil bukan hanya untuk gaya. Banyak produk juga membantu kenyamanan,
+            kebersihan, keselamatan dan pengalaman berkendara harian.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kategori">
+      <div class="section-title center">
+        <small>Kategori Aksesori</small>
+        <h2>Koleksi produk untuk berbagai kebutuhan mobil.</h2>
+        <p>
+          Kategori yang jelas membuat website terlihat lebih profesional dan memudahkan
+          visitor memahami jenis produk yang tersedia.
+        </p>
+      </div>
+
+      <div class="category-grid">
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=80" alt="Car exterior accessories">
+          <div class="category-content">
+            <h3>Eksterior</h3>
+            <p>
+              Body cover, mud guard, emblem, spoiler, door visor, side mirror cover
+              dan aksesori tampilan luar kendaraan.
+            </p>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=900&q=80" alt="Car interior">
+          <div class="category-content">
+            <h3>Interior</h3>
+            <p>
+              Seat cover, karpet mobil, dashboard mat, organizer, phone holder,
+              aroma mobil dan perlengkapan kabin.
+            </p>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=900&q=80" alt="Car lights">
+          <div class="category-content">
+            <h3>Lighting</h3>
+            <p>
+              Lampu LED, fog lamp, ambient light, lampu kabin dan aksesori pencahayaan
+              untuk fungsi serta tampilan.
+            </p>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=900&q=80" alt="Car detailing">
+          <div class="category-content">
+            <h3>Detailing</h3>
+            <p>
+              Shampoo mobil, wax, coating spray, glass cleaner, tire polish dan
+              perlengkapan pembersihan kendaraan.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="info-band">
+      <div class="info-image"></div>
+
+      <div class="info-copy">
+        <small>Automotive Detail</small>
+        <h2>Aksesori yang baik membuat mobil lebih rapi, nyaman dan personal.</h2>
+        <p>
+          Setiap pemilik mobil memiliki kebutuhan berbeda. Ada yang ingin tampilan luar
+          terlihat lebih sporty, ada yang fokus pada kenyamanan kabin, dan ada juga yang
+          mencari produk perawatan supaya mobil tetap bersih dan terjaga.
+        </p>
+        <p>
+          Website toko aksesori mobil yang baik perlu menjelaskan kategori produk dengan
+          bahasa sederhana. Visitor perlu tahu fungsi produk, cara memilih, material,
+          ukuran, kompatibilitas dan cara perawatannya.
+        </p>
+        <p>
+          Tampilan website yang clean juga membantu produk terlihat lebih premium,
+          terutama untuk toko yang ingin membangun kepercayaan pelanggan.
+        </p>
+      </div>
+    </section>
+
+    <section id="fitur" class="feature-zone">
+      <div class="section-title">
+        <small>Kenapa Pilih Aksesori Yang Sesuai</small>
+        <h2>Jangan hanya pilih karena tampilan, perhatikan fungsi dan kualitas.</h2>
+        <p>
+          Aksesori mobil yang tepat dapat meningkatkan pengalaman berkendara.
+          Namun, produk yang tidak cocok bisa mengganggu kenyamanan atau kurang tahan lama.
+        </p>
+      </div>
+
+      <div class="feature-layout">
+        <aside class="feature-side">
+          <h3>Checklist Sebelum Membeli</h3>
+          <p>
+            Bagian seperti ini membuat website terlihat informatif dan membantu visitor
+            memahami cara memilih aksesori.
+          </p>
+
+          <div class="feature-side-list">
+            <div>Cek kompatibilitas dengan model mobil</div>
+            <div>Perhatikan material dan ketahanan produk</div>
+            <div>Pastikan pemasangan tidak merusak kendaraan</div>
+            <div>Pilih ukuran yang sesuai dengan kabin</div>
+            <div>Utamakan fungsi, kenyamanan dan keselamatan</div>
+          </div>
+        </aside>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">01</div>
+            <h3>Kompatibilitas</h3>
+            <p>
+              Produk seperti karpet, cover, wiper dan door visor perlu disesuaikan
+              dengan model dan tahun kendaraan.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">02</div>
+            <h3>Material</h3>
+            <p>
+              Material menentukan daya tahan. Untuk interior, pilih bahan yang mudah
+              dibersihkan dan tidak cepat pudar.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">03</div>
+            <h3>Fungsi Harian</h3>
+            <p>
+              Phone holder, organizer, sunshade dan charger mobil membantu penggunaan
+              harian menjadi lebih praktis.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">04</div>
+            <h3>Tampilan</h3>
+            <p>
+              Aksesori eksterior dan interior dapat memberi karakter baru tanpa perlu
+              modifikasi besar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="produk" class="product-section">
+      <div class="section-title center">
+        <small>Produk Pilihan</small>
+        <h2>Contoh kategori produk untuk halaman toko.</h2>
+        <p>
+          Section ini bisa kamu edit sesuai produk asli toko. Ganti gambar, nama kategori
+          dan deskripsi mengikut stok atau brand yang kamu ingin tampilkan.
+        </p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80" alt="Car seat">
+          <div class="product-content">
+            <div class="product-tag">Interior</div>
+            <h3>Seat Cover & Cushion</h3>
+            <p>
+              Membantu melindungi jok mobil dan memberi rasa duduk yang lebih nyaman.
+              Tersedia dalam berbagai bahan seperti leather look, fabric dan mesh.
+            </p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=80" alt="Car exterior">
+          <div class="product-content">
+            <div class="product-tag">Exterior</div>
+            <h3>Body Trim & Protection</h3>
+            <p>
+              Aksesori pelindung seperti door guard, bumper guard, mud guard dan
+              side molding membantu menjaga bagian luar kendaraan.
+            </p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=900&q=80" alt="Car lighting">
+          <div class="product-content">
+            <div class="product-tag">Lighting</div>
+            <h3>LED & Ambient Light</h3>
+            <p>
+              Lampu tambahan dapat meningkatkan visibilitas atau memberi suasana kabin
+              yang lebih modern, selama pemasangannya aman dan rapi.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="panduan">
+      <div class="section-title">
+        <small>Panduan Pembeli</small>
+        <h2>Tips memilih aksesori mobil agar tidak salah beli.</h2>
+        <p>
+          Artikel edukasi seperti ini membuat website lebih panjang, natural dan bermanfaat
+          untuk visitor yang sedang mencari aksesori mobil.
+        </p>
+      </div>
+
+      <div class="guide-layout">
+        <article class="guide-main">
+          <h3>1. Kenali kebutuhan mobil terlebih dahulu</h3>
+          <p>
+            Sebelum membeli aksesori, tentukan dulu tujuan utama. Apakah ingin membuat
+            interior lebih rapi, melindungi bodi, memperbaiki pencahayaan, atau hanya
+            ingin tampilan mobil lebih personal?
+          </p>
+          <p>
+            Dengan memahami kebutuhan, pilihan produk menjadi lebih terarah dan tidak
+            membeli barang yang akhirnya jarang digunakan.
+          </p>
+
+          <h3>2. Pastikan produk cocok dengan model kendaraan</h3>
+          <p>
+            Tidak semua aksesori universal benar-benar cocok untuk semua mobil. Produk
+            seperti karpet, cover jok, talang air, wiper, head unit frame dan body kit
+            biasanya perlu disesuaikan dengan model kendaraan.
+          </p>
+          <ul>
+            <li>Periksa model dan tahun mobil.</li>
+            <li>Perhatikan ukuran produk.</li>
+            <li>Lihat cara pemasangan.</li>
+            <li>Pastikan tidak menutup sensor atau fungsi penting kendaraan.</li>
+          </ul>
+
+          <h3>3. Pilih material yang mudah dirawat</h3>
+          <p>
+            Untuk pemakaian harian, material yang mudah dibersihkan sangat penting.
+            Karpet mobil, seat cover dan organizer sebaiknya menggunakan bahan yang
+            tidak mudah menyerap noda dan tahan panas.
+          </p>
+
+          <h3>4. Utamakan keselamatan</h3>
+          <p>
+            Beberapa aksesori terlihat menarik tetapi bisa mengganggu visibilitas atau
+            fungsi mobil jika dipasang sembarangan. Hindari produk yang menghalangi
+            pandangan, mengganggu pedal, atau membuat kabel berantakan.
+          </p>
+
+          <h3>5. Rawat aksesori secara rutin</h3>
+          <p>
+            Aksesori yang dirawat dengan baik akan lebih tahan lama. Bersihkan interior
+            secara berkala, lap bagian eksterior, dan hindari penggunaan bahan kimia
+            yang terlalu keras pada permukaan plastik, kulit sintetis atau karet.
+          </p>
+        </article>
+
+        <div class="guide-side"></div>
+      </div>
+    </section>
+
+    <section id="care" class="care-section">
+      <div class="section-title center">
+        <small>Perawatan Mobil</small>
+        <h2>Tips menjaga aksesori tetap rapi dan tahan lama.</h2>
+        <p>
+          Aksesori yang dipasang dengan baik perlu dijaga supaya tetap bersih,
+          aman digunakan dan tidak cepat rusak.
+        </p>
+      </div>
+
+      <div class="care-grid">
+        <div class="care-card">
+          <strong>1</strong>
+          <h3>Bersihkan Rutin</h3>
+          <p>
+            Lap dashboard, organizer dan panel interior agar debu tidak menumpuk
+            dan warna tetap terlihat segar.
+          </p>
+        </div>
+
+        <div class="care-card">
+          <strong>2</strong>
+          <h3>Hindari Panas Berlebih</h3>
+          <p>
+            Gunakan sunshade bila parkir lama di tempat panas untuk menjaga material
+            interior tidak cepat pudar.
+          </p>
+        </div>
+
+        <div class="care-card">
+          <strong>3</strong>
+          <h3>Cek Pemasangan</h3>
+          <p>
+            Pastikan aksesori tidak longgar, terutama pada bagian eksterior dan
+            aksesori yang ditempel.
+          </p>
+        </div>
+
+        <div class="care-card">
+          <strong>4</strong>
+          <h3>Gunakan Produk Sesuai</h3>
+          <p>
+            Untuk detailing, gunakan cleaner yang sesuai dengan bahan seperti plastik,
+            kulit sintetis, kaca atau ban.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <div class="section-title center">
+        <small>FAQ</small>
+        <h2>Soalan umum tentang aksesori mobil.</h2>
+        <p>
+          Bahagian FAQ membantu website terlihat lebih lengkap dan menjawab pertanyaan
+          asas dari visitor.
+        </p>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Apakah semua aksesori mobil bersifat universal?</summary>
+          <p>
+            Tidak. Beberapa produk memang universal, tetapi produk seperti karpet,
+            seat cover, talang air, wiper dan body trim perlu disesuaikan dengan model mobil.
+          </p>
+        </details>
+
+        <details>
+          <summary>Apakah aksesori eksterior bisa merusak cat mobil?</summary>
+          <p>
+            Jika dipasang dengan cara yang salah atau menggunakan perekat berkualitas rendah,
+            ada risiko meninggalkan bekas. Pastikan permukaan bersih dan pemasangan dilakukan rapi.
+          </p>
+        </details>
+
+        <details>
+          <summary>Aksesori apa yang paling berguna untuk harian?</summary>
+          <p>
+            Untuk penggunaan harian, produk seperti phone holder, organizer, karpet mobil,
+            charger mobil, sunshade dan aroma kabin termasuk pilihan yang praktis.
+          </p>
+        </details>
+
+        <details>
+          <summary>Bagaimana cara menjaga interior mobil tetap bersih?</summary>
+          <p>
+            Bersihkan debu secara rutin, gunakan karpet yang mudah dicuci, hindari makan
+            berlebihan di dalam mobil, dan gunakan organizer supaya barang tidak berserakan.
+          </p>
+        </details>
+
+        <details>
+          <summary>Apakah lighting tambahan aman digunakan?</summary>
+          <p>
+            Aman jika dipasang dengan benar dan tidak mengganggu sistem listrik kendaraan.
+            Pastikan instalasi rapi dan tidak mengganggu visibilitas pengemudi.
+          </p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>AutoCraft Accessories</h3>
+        <p>
+          Website informasi toko aksesori mobil, kategori produk, panduan memilih,
+          dan tips perawatan kendaraan untuk penggunaan harian.
+        </p>
+      </div>
+
+      <div>
+        <h3>Menu</h3>
+        <a href="#kategori">Kategori</a>
+        <a href="#produk">Produk</a>
+        <a href="#panduan">Panduan</a>
+        <a href="#care">Perawatan</a>
+      </div>
+
+      <div>
+        <h3>Info</h3>
+        <a href="#">About Store</a>
+        <a href="#">Product Guide</a>
+        <a href="#">Privacy Note</a>
+        <a href="#">Editorial Policy</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 AutoCraft Accessories. Automotive accessories information website.
+    </div>
+  </footer>
+
+</body>
+</html>
